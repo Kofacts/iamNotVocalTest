@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TEDxPH</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+    
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+    <base href="/">
+    
+  </head>
+
+  <body>
+   
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+    
+      <div id="logo" class="pull-left">
+        <a href="/"><img src="img/iamvocal4.png" alt="" title="" /></img></a>
+        
+      </div>  
+      <nav id="nav-menu-container" style="float:right;">
+        <ul class="nav-menu">
+          <li><a href="/">HOME</a></li>
+          <li><a href="#about">ABOUT US</a></li>
+          <li><a href="/ideasearch">IDEA SEARCH</a></li>
+          <li><a href="/vote">VOTE</a></li>
+          <li><a href="#contact">CONTACT US</a></li>
+          <li><a href="/dashboard">DASHBOARD</a></li>
+           <% if(!user){ %>
+            <li><a href="/signup"> SIGN UP</a></li>
+            <li><a href="/signin">SIGN IN</a></li>
+          <% } %>
+          <% if(user){ %>
+            <li><a href="/logout"> LOGOUT</a></li>
+          <% } %>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+     
+    </div>
+  </header><!-- #header -->
+  <section class="team" id="team">
+      <div class="container">
+        <% if(beforevote){ %>
+          <h2 class="text-center" style="color: rgb(39,39,39);">
+            It's not yet time for voting...
+          </h2>
+          <div class="col-lg-12 col-xs-12 col-md-12 text-center"><i class="fa fa-hand-paper-o fa-5x" style="text-align: center; margin: auto"></i></div>
+        <% } %>
+        <% if(!beforevote){ %>
+          <h2 class="text-center" style="color: rgb(39,39,39);">
+            Voting has ended..
+          </h2>
+          <div class="col-lg-12 col-xs-12 col-md-12 text-center"><i class="fa fa-hand-peace-o fa-5x" style="text-align: center; margin: auto"></i></div>
+        <% } %>
+        
+      </div>
+    </section>
+    
+    <section class="about" id="about">
+      <div class="container text-center">
+        <h2>
+          About TEDxPortHarcourt
+        </h2>
+
+        <p>
+          We are a community of thinkers who are brainstorming on ideas and as well acting on these ideas so as to see how we can make our city a better place. In the spirit of the bigger TED organization, we believe we should provide a platform for ideas that are worth sharing and we also believe that hidden in all the bustle and hustle of our city are ideas worth sharing and acting on. For this year, TEDxPortHarcourt is organizing an event that would culminate on 11<sup>th</sup> of November 2017. There would be an idea search challenge for which you can get details of <a href="/ideasearch">here</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="section-title" style="color: rgb(39,39,39);">Contact Us</h2>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12 ">
+            <div class="info">
+              <div class="row">
+                <div class="col-lg-4 col-xs-4 col-md-4">
+                  <i class="fa fa-map-marker" style="color:rgb(39,39,39);"></i>
+                  <p>151/160 Ordinance Road<br>Port Harcourt, 100211</p>
+                </div>
+                
+                <div class="col-lg-4 col-xs-4 col-md-4">
+                  <i class="fa fa-envelope" style="color:rgb(39,39,39);"></i>
+                  <p>info@tedxportharcourt.com</p>
+                </div>
+                
+                <div class="col-lg-4 col-xs-4 col-md-4">
+                  <i class="fa fa-phone" style="color:rgb(39,39,39);"></i>
+                  <p>+2349034017159</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+   <footer id="contact" class="site-footer">
+      <div class="bottom bottomDisplay">
+        <div class="container">
+          <div class="text-center col-xs-12 col-md-12 col-lg-12" style="margin-bottom: 5%;">
+              <a href="https://twitter.com/tedxphcity" class="social-media"><i class="fa fa-twitter-square fa-2x"></i></a> <a href="https://www.facebook.com/tedxphcity" class="social-media"><i class="fa fa-facebook-square fa-2x"></i></a>  <a href="mailto:info@tedxportharcourt.com" class="social-media"><i class="fa fa-envelope fa-2x"></i></a>
+          </div>
+          <div class="row">
+          
+            <div class="col-lg-12 col-xs-12  text-center">
+              <p class="copyright-text">
+                © TEDxPortHarcourt
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <style type="text/css">
+      a.social-media{
+        display: inline-block;
+        margin-left: 10%;
+        color:white;
+      }
+      
+    </style>
+
+    <!-- Required JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/tether/js/tether.min.js"></script>
+    <script src="lib/stellar/stellar.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/easing/easing.js"></script>
+    <script src="lib/stickyjs/sticky.js"></script>
+    <script src="lib/parallax/parallax.js"></script>
+    <script src="lib/lockfixed/lockfixed.min.js"></script>
+    
+    <!-- Template Specisifc Custom Javascript File -->
+    <script src="js/custom.js"></script>
+    
+      
+  </body>
+</html>

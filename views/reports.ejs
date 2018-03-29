@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Reports | I_AMVOCAL</title>
+	<!-- all assets files --><link href="img/favicon.ico" rel="icon">
+	<link rel="stylesheet" type="text/css" href="assets/materialize/materialize/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="assets/custom/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body style="background: #F5F5F5">
+	<% include includes/navbar %>
+	<section id="section_body" >
+		<div id="background_section" style="height: 200px;">
+			<div class="container valign-wrapper padd-20 font-big-light">
+	  			<h4 class="light-b">Reports from the field...</h4>
+			</div>
+		</div>
+		<div class="container" style="margin-top: -70px;">
+			<div class="card horizontal" style="height:100%; margin-top: 20px; margin-bottom: 160px">
+				
+				<div class="card-stacked">
+			        <div class="card-content">
+			        	<% if(posts.length) { %>
+				        	<div class="row">
+				        		<% for (var i = 0; i < posts.length; i++){ %>
+									<div class="col s12 l3">
+									    <div class="card ">
+									        
+									        <div class="card-content" style="padding-left: 0px !important; padding-right: 0px !important; padding-top:0px !important">
+									          <div style="background: url('<% posts[i].image %>' ); background-size: cover cover; background-position: center; height: 150px; padding-top: 0px !important">
+									          
+
+									          	</div>
+									          <div class="" style="padding-top: 10px; padding-right: 10px !important">
+									          	  <p class="blog-title"><% posts[i]['title'] %></p>
+									          	  <span class="blog-time"><i >Posted On</i> posts[i]['dateAdded'] %></span>
+									              <p class="blog-content"><% polls[i]['description'] %></p>
+									      	  </div>
+									        </div>
+									    </div>
+									</div>	
+								<% } %>
+				        	</div>
+					        <div class="divider"></div>
+				        	 <center>
+				        	 	<ul class="pagination">
+							    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+							    <li class="active"><a href="#!">1</a></li>
+							    <li class="waves-effect"><a href="/reports?query=6-10">2</a></li>
+							    <li class="waves-effect"><a href="/reports?query=11-15">3</a></li>
+							    <li class="waves-effect"><a href="/reports?query=16-20">4</a></li>
+							    <li class="waves-effect"><a href="/reports?query=21-25">5</a></li>
+							    <li class="waves-effect"><a href=""><i class="material-icons">chevron_right</i></a></li>
+							  </ul>
+							</center>
+						<% } %>
+						<% if(!posts.length){ %>
+							<div class="card ">        
+						        <div class="card-content" style="padding-left: 0px !important; padding-right: 0px !important; padding-top:0px !important">
+						          <div class="" style="padding-top: 10px; padding-right: 10px !important">
+						          	  <p class="blog-title">There are no reports for now...</p>
+						      	  </div>
+						        </div>
+						    </div>
+						<% } %>
+			        </div>
+
+
+			    </div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<!-- footer section -->
+	<% include includes/footer %>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/materialize/materialize/js/materialize.js"></script>
+
+<script type="text/javascript" src="assets/custom/style.js"></script>
+</body>
+
+</html>

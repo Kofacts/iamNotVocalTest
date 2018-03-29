@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>I Am Vocal - Create A Poll Page</title>
+	<!-- all assets files -->
+	<link rel="stylesheet" type="text/css" href="assets/materialize/materialize/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="assets/custom/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body style="background: #F5F5F5">
+	<section id="section_bg" >	
+	  <!-- drop down opti -->
+	  	<!-- Dropdown Structure -->
+		<ul id="dropdown1" class="dropdown-content" style="margin-top: 67px;">
+		  <li><a href="#!" class="nav_dropdown">Sign Up</a></li>
+		  <li class="divider" ></li>
+		  <li><a href="#!" class="nav_dropdown">Sign In</a></li>
+		</ul>	
+	  <nav id="nav_prim" >
+	    <div class="nav-wrapper">
+	      <!-- mobile view -->
+	      <div class="row hide-on-med-and-up">
+	      	<div class="col s6 left-align">
+	      		<img src="src/logo.png" class="right-align hide-on-med-and-up" id="logo">
+	      	</div>
+
+	      	<div class="col s6 push-s6 right-align" style="position: absolute !important; right: 0 !important; margin-left: 	100px">
+	      
+	      		<a href="#" data-activates="slide-out" class="button-collapse show-on-large hide-on-med-and-up right-align"><i style="cursor: pointer; color: black !important; position: absolute; right: 0; top: 0" class="material-icons" >menu</i></a>
+	      	</div>
+	      </div>
+
+	      <!-- side nav -->
+	 <ul id="slide-out" class="side-nav">
+	      <li><div class="user-view">
+	      <div id="mobile_menu_background" class="background">
+	        
+	      </div>
+	      <a href="#!user"><img class="" id="logo" src="src/logo.png"></a>
+	      <a href="#!name"><span class="white-text name">Welcome, Guest!</span></a> <br>
+	      
+	   	 </div>
+		</li>
+	      <li><a href="#!"><i class="material-icons">home</i>Home</a></li>
+	      <li><a href="#!"><i class="material-icons">info</i>About Us</a></li>
+	      <li><a href="#!"><i class="material-icons">add_alarm</i>Activity</a></li>
+	      <li><a href="#!"><i class="material-icons">add</i>Sign Up</a></li>
+	      <li><a href="#!"><i class="material-icons">account_circle</i>Sign In</a></li>
+	      
+	 </ul>
+		 
+        
+
+        <!-- end sidenav -->
+	      
+	      <!-- <a href="#" class="brand-logo left-align hide-on-med-and-up">
+	      	<img src="src/logo.png" class="left-align" id="logo">
+	      </a> -->
+	      <!--end -->
+	      <a href="#" class="brand-logo hide-on-med-and-down">
+	      	<img src="src/logo.png" id="logo">
+	      </a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li class=""><a href="sass.html" class="nav_link"><i class="zmdi zmdi-home"></i></a></li>
+	        <li><a href="badges.html" class="nav_link">About Us</a></li>
+	        <li><a href="collapsible.html" class="nav_link">Activity</a> </li>
+	        <li><a href="collapsible.html" class="nav_link">Poll</a> </li>
+	        <li class="active"><a class="dropdown-button" class="nav_link" href="#!" data-activates="dropdown1" style="color: black !important">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+	      </ul>
+	    </div>
+	  </nav>   
+	</section>
+
+	<section id="section_body" >
+		<div id="background_section" style="height: 200px;">
+			<div class="container valign-wrapper padd-20 font-big-light">
+	  			<h4 class="light-b">Add Poll Participants</h4>
+			</div>
+		</div>
+		<div class="container" style="margin-top: -70px;">
+			<div class="card horizontal hide-on-med-and-down" style="height: 150px">
+				<div class="card-stacked">
+						<ul class="progressbar">
+					          <li class="">ABOUT POLL</li>
+					          <li class="active">ADD PARTICIPANTS</li>
+					          <li>SHARE POLL</li>
+					          
+					  	</ul>
+				</div>
+			</div>
+			<div class="card horizontal" style="height:90vh; margin-top: 20px; margin-bottom: 160px">
+				<div class="card-stacked">
+			        <div class="card-content">
+			        	<div class="row">
+			      
+
+			        		<div class="col s12 l4 poll_cta">
+				        		<div class="margin_offset">
+				        			<center>
+				        				<i class="material-icons center icon-3x">group_add</i>
+				        				<br>
+				        				<span>Poll Participants</span>
+				        				<br><br>
+				        			
+				        				<span style="font-size: 10px; float: left">Steps to Creating a Poll.</span><br>
+				        				<span style="float: left;font-size: 10px;">*****</span><br>
+				        				<span style="float: left;font-size: 10px;">Select Your Preferred Poll Name</span><br>
+				        				<span style="float: left;font-size: 10px;">Describe What your Poll is about</span>
+				        			</center>
+				        		</div>	
+			        		</div>
+
+			        		<div class="col s12 l7 poll_main" style="position: absolute; top: 0; right: 0; height: 90vh; background-size: cover; background-position: center center; background-repeat: no-repeat; margin-left: 20px !important ">
+			        			
+			        			<div class="poll_content">
+			        				<div class="row">
+									    <form class="col s12">
+									    <div class="row">
+									        <div class="input-field input-field2 col s12">
+									          <i class="material-icons prefix" style="color: white">verified_user</i>
+									          <input id="icon_prefix" type="text" class="validate poll_form">
+									          <label for="icon_prefix">Enter Name of Participant</label>
+									        </div>
+
+									        <div class="input-field input-field2 col s12">
+									          <i class="material-icons prefix" style="color: white">info</i>
+									          <textarea id="icon_prefix" class="materialize-textarea poll_form"></textarea>
+									          <label for="icon_prefix2">Enter Participant's Description</label>
+									        </div>
+
+									        <div class="input-field input-field2 col s12">
+									          <i class="material-icons prefix" style="color: white">more_vert</i>
+									          <textarea id="icon_prefix" class="materialize-textarea poll_form"></textarea>
+									          <label for="icon_prefix2">Manifestor of Participant</label>
+									        </div>
+
+									       
+
+												<div class="col s12 " style="margin-top: 40px; margin-bottom: 40px">
+											        <input type="submit" value="Create Poll " class="btn right white-btn" name="">
+											    </div>
+
+
+											</div>
+									     
+									    </form>
+									</div>
+									
+									</div>       
+			        			</div>
+			        		</div>
+			        	</div>
+			        </div>
+			    </div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<!-- footer section -->
+	<section>
+		
+        <footer class="page-footer" style="background: black !important;">
+          <div class="container">
+            <div class="row">
+              <div class="col l4 s12">
+                <h6 class="white-text">Quick Links</h6>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+              <div class="col l4  s12">
+                <h6 class="white-text">Social Links</h6>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+
+              <div class="col l4  s12">
+                <h6 class="white-text">Contact Us</h6>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright" style="opacity: .3">
+            <div class="container">
+            © 2018 iAmVocal
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+	</section>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/materialize/materialize/js/materialize.js"></script>
+<script type="text/javascript" src="assets/particlesjs/particles.js"></script>
+<script type="text/javascript">
+	particlesJS.load('particles-js', 'assets/custom/particles.json', function() {
+	  console.log('callback - particles.js config loaded');
+	});
+</script>
+<script type="text/javascript" src="assets/custom/style.js"></script>
+</body>
+
+</html>

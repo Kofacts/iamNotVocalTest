@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Create a poll | I_AMVOCAL</title>
+	<!-- all assets files --><link href="img/favicon.ico" rel="icon">
+	<link rel="stylesheet" type="text/css" href="assets/materialize/materialize/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="assets/custom/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body style="background: #F5F5F5">
+	<% include includes/navbar %>
+
+	<section id="section_body" >
+		<div id="background_section" style="height: 200px;">
+			<div class="container valign-wrapper padd-20 font-big-light">
+	  			<h4 class="light-b">Create a new poll</h4>
+			</div>
+		</div>
+		<div class="container" style="margin-top: -70px;">
+			<div class="card horizontal hide-on-med-and-down" style="height: 150px">
+				<div class="card-stacked">
+						<ul class="progressbar">
+					          <li class="active">About your poll</li>
+					          <li>Add participants</li>
+					          <li>Share poll</li>
+					          
+					  	</ul>
+				</div>
+			</div>
+			<div class="card horizontal" style="height:120vh; margin-top: 20px; margin-bottom: 160px">
+				<div class="card-stacked">
+			        <div class="card-content">
+			        	<div class="row">
+			      
+
+			        		<div class="col s12 l4 poll_cta">
+				        		<div class="margin_offset">
+				        			<center>
+				        				<i class="material-icons center icon-3x">add</i>
+				        				<br>
+				        				<span>Create a poll</span>
+				        				<br><br>
+				        			
+				        				<span style="font-size: 10px; float: left">Steps to creating a poll.</span><br>
+				        				<span style="float: left;font-size: 10px;">*****</span><br>
+				        				<span style="float: left;font-size: 10px;">Select Your Preferred Poll Name</span><br>
+				        				<span style="float: left;font-size: 10px;">Describe What your Poll is about</span>
+				        			</center>
+				        		</div>	
+			        		</div>
+
+			        		<div class="col s12 l7 poll_main" style="position: absolute; top: 0; right: 0; height: 120vh; background-size: cover; background-position: center center; background-repeat: no-repeat; margin-left: 20px !important ">
+			        			
+			        			<div class="poll_content">
+			        				<div class="row">
+									    <form action="/createPoll" method="post" id="create_poll" class="col s12">
+									    <div class="row">
+									        <div class="input-field input-field2 col s12">
+									          <i class="material-icons prefix" style="color: white">contacts</i>
+									          <input name="name" id="icon_prefix" type="text" class="poll_name validate poll_form">
+									          <label for="icon_prefix">Enter name of the poll</label>
+									        </div>
+
+									        <div class="input-field input-field2 col s12">
+									          <i class="material-icons prefix" style="color: white">info</i>
+									          <textarea name="description" id="icon_prefix" class="poll_desc materialize-textarea poll_form"></textarea>
+									          <label for="icon_prefix2">Enter poll description</label>
+									        </div>
+
+									        
+									        <div class="input-field col s12">
+									            <i class="material-icons prefix" style="color: white">accessibility</i>
+											    <select name="pollType" class="poll_type" >
+											      <option value="" disabled selected>Choose your option</option>
+											      <option value="election">Election poll</option>
+											      <option value="opinion">Opinion poll</option>
+											    </select>
+											    <label>Select type of poll</label>
+											</div>
+
+											<div class="input-field col s12">
+									            <i class="material-icons prefix" style="color: white">fingerprint</i>
+											    <select class="poll_access_type" name="accessType" >
+											      <option value="" disabled selected>Choose your option</option>
+											      <option value="open">Open</option>
+											      <option value="closed">Closed</option>
+											     
+											    </select>
+											    <label>Select the poll access type</label>
+											</div>
+
+											<div class="input-field input-field2 col s12">
+									          <i class="material-icons prefix" style="color: white">keyboard</i>
+									          <input  name="passcode" id="icon_prefix" type="text" class="validate poll_passcode">
+									          <label for="icon_prefix">Preferred passcode for the poll</label>
+									        </div>
+
+											<div class="row">
+												<div class="col s12 l6">
+													
+													<div class="input-field input-field2 col s12">
+											          <i class="material-icons prefix" style="color: white">access_time</i>
+											          <input name="startTime" id="icon_prefix" type="text" class="poll_start_time timepicker">
+
+											          <label for="icon_prefix">Enter poll start-time</label>
+											        </div>
+												</div>
+
+												<div class="col s12 l6">
+													
+													<div class="input-field input-field2 col s12">
+											          <i class="material-icons prefix" style="color: white">access_alarm</i>
+											          <input name="endTime" id="icon_prefix" type="text" class="timepicker poll_end_time">
+
+											          <label for="icon_prefix">Enter poll end-time</label>
+											        </div>
+												</div>
+
+												<div class="col s12 l6">
+													
+													<div class="input-field input-field2 col s12">
+											          <i class="material-icons prefix" style="color: white">access_alarm</i>
+											          <input name="startDate" id="icon_prefix" type="text" class="poll_start_date datepicker">
+
+											          <label for="icon_prefix">Enter poll start-date</label>
+											        </div>
+												</div>
+
+												<div class="col s12 l6">
+													
+													<div class="input-field input-field2 col s12">
+											          <i class="material-icons prefix" style="color: white">access_alarm</i>
+											          <input name="endDate" id="icon_prefix" type="text" class="datepicker poll_end_date">
+
+											          <label for="icon_prefix">Enter poll end-date</label>
+											        </div>
+												</div>
+
+												<div class="col s12 " style="margin-top: 40px; margin-bottom: 40px">
+											        <input type="submit" value="Next Step " class="btn right white-btn">
+											    </div>
+
+
+											</div>
+									     
+									    </form>
+									</div>
+									</div>       
+			        			</div>
+			        		</div>
+			        	</div>
+			        </div>
+			    </div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<!-- footer section -->
+	<% include includes/footer %>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/materialize/materialize/js/materialize.js"></script>
+<script type="text/javascript" src="assets/custom/style.js"></script>
+<script type="text/javascript">
+	$('.datepicker').pickadate({
+	    selectMonths: true, // Creates a dropdown to control month
+	    selectYears: 15, // Creates a dropdown of 15 years to control year,
+	    today: 'Today',
+	    clear: 'Clear',
+	    close: 'Ok',
+	    closeOnSelect: false // Close upon selecting a date,
+	  });
+
+	$('.timepicker').pickatime({
+	    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+	    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+	    twelvehour: false, // Use AM/PM or 24-hour format
+	    donetext: 'OK', // text for done-button
+	    cleartext: 'Clear', // text for clear-button
+	    canceltext: 'Cancel', // Text for cancel-button
+	    autoclose: false, // automatic close timepicker
+	    ampmclickable: true, // make AM PM clickable
+	    aftershow: function(){} //Function for after opening timepicker
+	  });
+</script>
+</body>
+
+</html>

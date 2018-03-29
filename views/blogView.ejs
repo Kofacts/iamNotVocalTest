@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title><%- post['title'] %> - Thoughts | I_AMVOCAL</title>
+	<!-- all assets files --><link href="img/favicon.ico" rel="icon">
+	<link rel="stylesheet" type="text/css" href="assets/materialize/materialize/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="assets/custom/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body style="background: #F5F5F5">
+	<% include includes/navbar %>
+	<section id="section_body" >
+		<div id="background_section" style="height: 200px;">
+			<div class="container valign-wrapper padd-20 font-big-light">
+	  			<h4 class="light-b"><%- post['title'] %> </h4>
+			</div>
+		</div>
+		<div class="container" style="margin-top: -70px;">
+			<div class="card horizontal" style="height:100%; margin-top: 20px; margin-bottom: 160px">
+				
+				<div class="card-stacked">
+			        <div class="card-content">
+			        	<div class="row">
+							<!-- blog featured image -->
+							<div class="col s12 l8">
+								<div class="row">
+									<% if(post['featuredImage']){ %>
+										<div class="col s12 l12 blog-img" style="background: url('<%- post.featuredImage %>')">
+									<% } %>
+									</div>
+
+									<div class="col s12 l12 blog-content">
+										<%- post['post'] %>
+									</div>
+
+									<br><br>
+									<!-- poll if there is any -->
+									<% if(post['hasPoll'] { %>
+										<div class="col s12 l12">
+											<div class="card horizontal blog-poll">
+												<div class="card-stacked">
+													<div class="card-content">
+														<div class="row">
+															<div class="col s12 l8">
+																<span class="blog-poll--title"><%- poll['title'] %></span>
+																<br>
+																<span class="blog-poll--desc">
+																	<%- poll['description'] %>
+																</span>
+															</div>
+
+															<div class="col s12 l4">
+																<div class="right" style="margin-top: 30%; margin-bottom: 30%">
+																	<a href="/polls?pollId=<%- poll['pollId'] %>"> <i class="material-icons">arrow_forward</i> </a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									<% } %>
+								</div>
+								
+							</div>
+							<% if(otherPosts.length){ %>
+								<div class="col s12 l4 blog-more">
+									<span id="header_sub-text" class="section-header"><br>More from our blog...</span>
+									<br><br>
+
+									<div class="row">
+										<div class="col s12 l12">
+											<div class="card">
+										        <div class="card-content" style="padding-left: 0px !important; padding-right: 0px !important; padding-top:0px !important">
+										        
+										          <% if(otherPosts[i]['featuredImage']) { %>
+										          <div style="background: url('<%- otherPosts[i].featuredImage %>'); background-size: cover cover; background-position: center; height: 150px; padding-top: 0px !important">
+										          <% } %>
+
+										          	</div>
+										          <div class="" style="padding-top: 10px; padding-right: 10px !important">
+										          	  <p class="blog-title"><%- otherPosts[i]['title'] %> </p>
+										      	  </div>
+										        </div>
+										    </div>
+										</div>
+
+									</div>
+
+								</div>
+			        		<% } %>
+			        	</div>
+			        	<div class="divider"></div>
+			        		<br>
+			        		<span class="blog--comment-header">Drop a comment </span>
+
+			        	<div class="divider"></div>	
+			        	<div id="disqus_thread"></div>
+						<div id="disqus_thread"></div>
+						<script>
+
+							/**
+							*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+							*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+							
+							var disqus_config = function () {
+								this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+								this.page.identifier = <% post['blogId'] %>; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+							};
+							(function() { // DON'T EDIT BELOW THIS LINE
+							var d = document, s = d.createElement('script');
+							s.src = 'https://i-amvocal.disqus.com/embed.js';
+							s.setAttribute('data-timestamp', +new Date());
+							(d.head || d.body).appendChild(s);
+							})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		        	
+			        </div>
+
+
+			    </div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<!-- footer section -->
+	<% include includes/footer %>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/materialize/materialize/js/materialize.js"></script>
+
+<script type="text/javascript" src="assets/custom/style.js"></script>
+<script id="dsq-count-scr" src="//i-amvocal.disqus.com/count.js" async></script>
+</body>
+
+</html>

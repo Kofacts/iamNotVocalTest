@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Page</title>
+</head>
+<body>
+	<form name="signup" method="post">
+		<div class="inputfield">
+			<label>First Name</label> <br>
+			<input type="text" name="firstName" required="true" placeholder="Idoko" class="inputElement">
+		</div>
+		<div class="inputfield">
+			<label>Last Name</label> <br>
+			<input type="text" name="lastName" required="true" placeholder="John" class="inputElement">
+		</div>
+		<div class="inputfield">
+			<label>Email Address</label> <br>
+			<input type="email" name="email" required="true" placeholder="you@me.com" class="inputElement">
+		</div>
+		<div class="inputfield">
+			<label>Password</label> <br>
+			<input type="password" name="password" placeholder="*******" required="true" class="inputElement">
+		</div>
+	</form>
+	<style type="text/css">
+		.inputElement{
+			border:none;
+			border-bottom: 2px solid white;
+			width:80%;
+			outline:none;
+			background: rgb(27,54,255);
+			color:white;
+		}
+		.inputfield  label{
+			color: rgb(139,153,255);
+		}
+		input::placeholder{
+			color:white;
+		}
+	</style>
+</body>
+</html>

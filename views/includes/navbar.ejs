@@ -1,0 +1,85 @@
+<section id="section_bg" >	
+	  <!-- drop down opti -->
+	  	<!-- Dropdown Structure -->
+		<ul id="dropdown1" class="dropdown-content" style="margin-top: 67px;">
+		  <% if(!user) { %>
+			  <li><a href="/signup" class="nav_dropdown">Sign up</a></li>
+			  <li class="divider" ></li>
+			  <li><a href="/signin" class="nav_dropdown">Sign in</a></li>
+		  <% } %>
+		  <% if(user) { %>
+		  	  <li><a href="/logout" class="nav_dropdown">Sign out</a></li>
+			  <li class="divider" ></li>
+		  <% } %>
+		</ul>	
+	  <nav id="nav_prim" >
+	    <div class="nav-wrapper">
+	      <!-- mobile view -->
+	      <div class="row hide-on-large-only">
+	      	<div class="col s6 left-align">
+	      		<img src="src/logo.png" class="right-align show-on-medium-and-up" id="logo">
+	      	</div>
+
+	      	<div class="col s6 push-s6 right-align" style="position: absolute !important; right: 0 !important; margin-left: 	100px">
+	      
+	      		<a href="#" data-activates="slide-out" class="button-collapse show-on-large show-on-medium-and-up right-align"><i style="cursor: pointer; color: black !important; position: absolute; right: 0; top: 0" class="material-icons" >menu</i></a>
+	      	</div>
+	      </div>
+
+	      <!-- side nav -->
+	 <ul id="slide-out" class="side-nav">
+	      <li><div class="user-view">
+	      <div id="mobile_menu_background" class="background">
+	        
+	      </div>
+	      <a href="#!user"><img class="" id="logo" src="src/logo.png"></a>
+	      <% if(user) { %>
+	      	<a href="#!name"><span class="white-text name">Welcome, <% user.email %></span></a> <br>
+	      <% } %>
+
+	   	 </div>
+		</li>
+	      <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+	      <li><a href="/about_us"><i class="material-icons">info</i>About us</a></li>
+	      <li><a href="/results"><i class="material-icons">assessment</i>Results</a></li>
+	      <li><a href="/polls"><i class="material-icons">dashboard</i>Polls</a></li>
+	      <li><a href="/blog"><i class="material-icons">web</i>Blog</a></li>
+	      <li><a href="/reports"><i class="material-icons">rate_review</i>Reports</a></li>
+	      <% if(!user) { %>
+		      <li><a href="/signup"><i class="material-icons">add</i>Sign up</a></li>
+		      <li><a href="/signin"><i class="material-icons">account_circle</i>Sign in</a></li>
+		  <% } %>
+		  <% if(user) { %>
+		  	 <li><a href="/createPoll"><i class="material-icons">add</i>Create poll</a></li>
+		     <li><a href="/logout"><i class="material-icons">account_circle</i>Sign out</a></li>
+		  <% } %>
+	      
+	 </ul>
+		 
+        
+
+        <!-- end sidenav -->
+	      
+	      <!-- <a href="#" class="brand-logo left-align hide-on-med-and-up">
+	      	<img src="src/logo.png" class="left-align" id="logo">
+	      </a> -->
+	      <!--end -->
+	      <a href="#" class="brand-logo hide-on-med-and-down">
+	      	<img src="src/logo.png" id="logo">
+	      </a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li class=""><a href="/" class="nav_link"><i class="zmdi zmdi-home"></i></a></li>
+	        <li><a href="/about_us" class="nav_link">About us</a></li>
+	        <li><a href="/results" class="nav_link">Results</a> </li>
+	        <li><a href="/polls" class="nav_link">Polls</a> </li>
+	        <% if(user){ %>
+	        	<li><a href="/createPoll" class="nav_link">Create poll</a></li>
+	        <% } %>
+	        <li><a href="/blog" class="nav_link">Blog</a> </li>
+	        <li><a href="/reports" class="nav_link">Reports</a> </li>
+	        <li class="active"><a class="dropdown-button" class="nav_link" href="#!" data-activates="dropdown1" style="color: black !important">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+
+	      </ul>
+	    </div>
+	  </nav>   
+	</section>
